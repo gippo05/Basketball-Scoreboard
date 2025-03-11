@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Oxanium", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200px;
+    font-style: normal;
+}
+.basketball-scoreboard{
+    height: 80vh;
+    background-color: black;
+    color: white;
+}
+.TopPart{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0px 0px 0px;
+    font-size: 6rem;
+}
+.TopPart h3{
+    font-size: 5rem;
+}
+.time{
+    color: red;
+    border: 5px solid white;
+    padding: 10px;
+    border-radius: 20px;
+}
+.bottomPart{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0px 0px 0px;
+}
+.team-a{
+    border: 5px solid white;
+    height: 250px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0px 40px 0px;
+    border-radius: 20px;
+    font-size: 12rem;
+    color: red;
+}
+.team-b{
+    border: 5px solid white;
+    height: 250px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0px 40px 0px;
+    border-radius: 20px;
+    font-size: 12rem;
+    color: red;
+}
+.bottomPart h3{
+    font-size: 6rem;
+}
+.column div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    margin: 50px 0px 0px 0px;
+    border-radius: 20px;
+    color: red;
+}
+.labels{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.team-a-buttons{
+    margin: 20px 0px 0px 20px;
+    border: 5px solid black;
+    border-radius: 20px;
+    width: 600px;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    button {
+        width: 100px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin: 10px;
+    }
+}
+.team-b-buttons{
+    position: absolute;
+    right: 20px;
+    bottom: 62px;
+    margin: 20px 0px 0px 20px;
+    border: 5px solid black;
+    border-radius: 20px;
+    width: 600px;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    button {
+        width: 100px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin: 10px;
+    }
+}
+.B-name{
+    position: absolute;
+    right: 20px;
+    bottom: 140px;
+    margin: 20px 0px 0px 20px;
+    border-radius: 20px;
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.other-buttons{
+    position: absolute;
+    bottom: 90px;
+    left: 700px;
+    max-width: 500px;
+    margin-top: 10px;
+    border: 5px solid black;
+    border-radius: 10px;
+    display: flex;
+    button {
+        width: 100px;
+        height: 55px;
+        font-size: 1.5rem;
+        margin: 5px;
+    }
+}
+.other-buttons2{
+    max-width: 500px;
+    margin-top: 10px;
+    border: 5px solid black;
+    border-radius: 10px;
+    display: flex;
+    position: absolute;
+    left: 700px;
+    button {
+        width: 100px;
+        height: 55px;
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 5px;
+    }
+}
+.foul1{
+    position: absolute;
+    right: 86rem;
+    bottom: 200px;
+    margin: 20px 0px 0px 20px;
+    border-radius: 20px;
+    width: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    color: orange;
+    border: 5px solid white;
+}
+.foul2{
+    position: absolute;
+    left: 85rem;
+    bottom: 200px;
+    margin: 20px 0px 0px 20px;
+    border-radius: 20px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+    border: 5px solid white;
+}
+.foulLabel1{
+    position: absolute;
+    right:93rem;
+    bottom: 250px;
+    margin: 20px 0px 0px 20px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+}
+.foulLabel2{
+    position: absolute;
+    left: 92rem;
+    bottom: 250px;
+    margin: 20px 0px 0px 20px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+}

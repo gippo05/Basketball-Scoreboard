@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Google FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+    <title>Basketball Scoreboard</title>
+</head>
+<body>
+<div class="main-container">
+    <div class="basketball-scoreboard">
+
+        <div class="TopPart">
+            <h3 class="team-A-name">Home</h3>
+                <div class="time">
+                    <h2 id="timer">12:00</h2>
+                </div>
+            <h3 class="team-B-Name">Guest</h3>
+        </div>
+        
+            <div class="bottomPart">
+                <div class="team-a">
+                    <h2 id="score-a">00</h2>
+                </div>
+
+                <div class="foulLabel1">
+                    <h2 class="labels">Fouls</h2>
+                </div>
+                <div class="foul1">
+                    <h3 id="foul-teamA">0</h3>
+                </div>
+
+                    <!-- <h3>Shot Clock</h3> -->
+                    <div class="column">
+                        
+                        <div class="shotClock">
+                            <h3 id="shotClockTime">24</h3>
+                        </div>
+                        <h2 class="labels">Shot Clock</h2>
+                        
+                        <div class="period">
+                            <h3 id="period">1</h3>
+                        </div> 
+                        <h2 class="labels">Period</h2> 
+                    </div>
+                   
+
+                    <div class="team-b">
+                        <h2 id="score-b">00</h2>
+                    </div> 
+
+                    <div class="foulLabel2">
+                        <h2 class="labels">Fouls</h2>
+                    </div>
+
+                    <div class="foul2">
+                        <div>
+                            <h3 id="foul-teamB">0</h3>
+                        </div>
+                        
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="buttons">
+    <div class="team-a-buttons">
+        <button class="onePoint-teamA" onclick="addOnePointTeamA()">1 point</button>
+        <button class="twoPoint-teamA" onclick="addTwoPointsTeamA()">2 points</button>
+        <button class="threePoint-teamA" onclick="addThreePointsTeamA()">3 Points</button>
+        <button class="remove1Point" onclick="removeOnePointTeamA()">-1 Point</button>
+        <button class="foul-teamA" onclick="addFoulA()">+1 Foul</button>
+        <button class="foul-teamA" onclick="removeFoulA()">-1 Foul</button>
+    </div>
+    <div class="team-b-buttons">
+        <button class="onePoint-teamB" onclick="add1pointB()">1 point</button>
+        <button class="twoPoint-teamB" onclick="add2pointsB()">2 points</button>
+        <button class="threePoint-teamB" onclick="add3pointsB()">3 points</button>
+        <button class="remove1Point" onclick="minusPointB()">-1 Point</button>
+        <button class="foul-teamB" onclick="addFoulB()">+1 Foul</button>
+        <button class="foul-teamA" onclick="removeFoulB()">-1 Foul</button>
+        
+
+    </div>
+    
+    <div class="other-buttons">
+        <button class="start-time">Start Time</button>
+        <button class="stop-time">Stop Time</button>
+        <button class="add1min">+1 Min</button>
+        <button class="remove1min">-1 Min</button>
+        <button class="add1sec">+1 Sec</button>
+        <button class="remove1sec">-1 Sec</button>
+        <button class="reset-time">Reset Time</button>
+    </div>
+    
+    <div class="other-buttons2">
+        <button class="start-shotclock" onclick="startShotClock()">Shot Clock</button>
+        <button class="stopShotClock" onclick="resetShotClock()">Reset Shot Clock</button>
+        <button class="resetShotClock" onclick="pauseShotClock()">Stop Shot Clock</button>
+        <button class="add1ShotClock">+1 Shot Clock</button>
+        <button class="remove1ShotClock">-1 Shot Clock</button>
+        <button class="horn">Buzzer</button>
+        <button class="NextPeriod" onclick="addPeriod()">Next Period</button>
+        <button class="ResetPeriod" onclick="resetPeriod()">Reset Period</button>
+    </div>
+    
+
+</div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
