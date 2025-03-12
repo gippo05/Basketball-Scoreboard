@@ -77,29 +77,39 @@ function resetPeriod(){
     document.getElementById('period').innerText = 1;
 }
 
-let shotClockSeconds = 24;
 
-function startShotClock(){
-    for (let i = 0; i < 24; i++) {
-        setTimeout(function(){
-            shotClockSeconds--;
-            document.getElementById('shotClockTime').innerText = shotClockSeconds;
-        }, 1000);
-    }
+// SHOT CLOCK BUTTON
+
+let shotClockSeconds = 24;
+let displayShotClock = document.getElementById('shotClockTime');
+let timer = null;
+
+function shotClock() {
+  shotClockSeconds--;
+  if (shotClockSeconds === 0) {
+    clearInterval(timer);
+  }
+  displayShotClock.innerHTML = shotClockSeconds;
 }
-function resetShotClock() {
-    shotClockSeconds = 24;
-    document.getElementById('shotClockTime').innerText = shotClockSeconds;
-}
+
 
 function startShotClock() {
-    resetShotClock();
-    let interval = setInterval(function() {
-        if (shotClockSeconds > 0) {
-            shotClockSeconds--;
-            document.getElementById('shotClockTime').innerText = shotClockSeconds;
-        } else {
-            clearInterval(interval);
-        }
-    }, 1000);
+  if (timer !== null) {
+    clearInterval(timer);
+  }
+  timer = setInterval(shotClock, 1000);
 }
+
+function resetShotClock() {
+  shotClockSeconds = 24;
+  displayShotClock.innerText = shotClockSeconds;
+}
+function resetShotClock14() {
+  shotClockSeconds = 14;
+  displayShotClock.innerText = shotClockSeconds;
+}
+
+function stopShotClock() {
+  clearInterval(timer);
+}
+
