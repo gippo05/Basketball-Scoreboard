@@ -88,6 +88,7 @@ function shotClock() {
   shotClockSeconds--;
   if (shotClockSeconds === 0) {
     clearInterval(timer);
+    buzzer();
   }
   displayShotClock.innerHTML = shotClockSeconds;
 }
@@ -113,3 +114,51 @@ function stopShotClock() {
   clearInterval(timer);
 }
 
+
+// TIMER DISPLAY AND FUNCTION
+
+let mainTimer =  document.getElementById('timer');
+let [minutes, seconds] = [12, 0];
+let time = null;
+
+
+function startTimer() {
+  seconds--;
+  if (seconds < 0) {
+    seconds = 59;
+    minutes--;
+  }
+  else if (minutes < 0) {
+    clearInterval(timer);
+  }
+  mainTimer.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+}
+
+function startMainTimer(){ // start the main timer
+    if (time !== null) {
+        clearInterval(time);
+      }
+      time = setInterval(startTimer, 1000);
+}
+function stopMainTimer(){
+    clearInterval(time);
+}
+function resetMainTimer(){
+    minutes = 12;
+    seconds = 0;
+    mainTimer.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+}
+
+// BUZZER AUDIO
+
+let audio = new Audio('./assets/buzzer.mp3');
+function buzzer(){
+    audio.play();
+}
+
+// SOUND 1
+
+let audio1 = new Audio('./assets/sound1.mp3');
+function sound1(){
+    audio1.play();
+}

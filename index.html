@@ -91,14 +91,10 @@
     </div>
     
     <div class="other-buttons">
-        <button class="start-time">Start Time</button>
-        <button class="stop-time">Stop Time</button>
-        <button class="resume-time">Resume Time</button>
-        <button class="add1min">+1 Min</button>
-        <button class="remove1min">-1 Min</button>
-        <button class="add1sec">+1 Sec</button>
-        <button class="remove1sec">-1 Sec</button>
-        <button class="reset-time">Reset Time</button>
+        <button class="start-time" onclick="startMainTimer()">Start Time</button>
+        <button class="stop-time" onclick="stopMainTimer()">Stop Time</button>
+        <button class="reset-time" onclick="resetMainTimer()">Reset Time</button>
+        <button class="sound1" onclick="sound1()">Sound 1</button>
     </div>
     
     <div class="other-buttons2">
@@ -106,7 +102,7 @@
         <button class="stop-shotclock" onclick="stopShotClock()">Stop Shot Clock</button>
         <button class="reset-shotclock" id = "pauseShotClock"onclick="resetShotClock()">Reset Shot Clock(24)</button>
         <button class="resetSClock14" onclick="resetShotClock14()">Reset Shot Clock(14)</button>
-        <button class="horn">Buzzer</button>
+        <button class="horn" onclick="buzzer()">Buzzer</button>
         <button class="NextPeriod" onclick="addPeriod()">Next Period</button>
         <button class="ResetPeriod" onclick="resetPeriod()">Reset Period</button>
     </div>
